@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:injectable/injectable.dart';
-import 'package:note_app/presentation/routes/routes.gr.dart';
+import 'package:memoscape/presentation/routes/routes.gr.dart';
 
 export 'package:auto_route/auto_route.dart';
 

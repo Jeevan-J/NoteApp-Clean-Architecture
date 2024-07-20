@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:note_app/common/extension/string.dart';
-import 'package:note_app/data/dto/note_dto.dart';
-import 'package:note_app/domain/model/error.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/domain/repository/note_repository.dart';
+import 'package:memoscape/common/extension/string.dart';
+import 'package:memoscape/data/dto/note_dto.dart';
+import 'package:memoscape/domain/model/error.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/domain/repository/note_repository.dart';
 import 'package:uuid/uuid.dart';
 
 @injectable

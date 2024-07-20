@@ -1,9 +1,9 @@
 import 'dart:ui' show Color;
 
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/common/extension/string.dart';
-import 'package:note_app/domain/model/note.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/common/extension/string.dart';
+import 'package:memoscape/domain/model/note.dart';
 
 part 'note_dto.g.dart';
 

@@ -29,6 +29,5 @@
     "**/*.iml": false,
     "**/*.md": false
   },
-  "explorerExclude.backup": null,
-  "dart.flutterSdkPath": "/Users/sanjaysoni/fvm/versions/3.7.3"
+  "explorerExclude.backup": null
 }

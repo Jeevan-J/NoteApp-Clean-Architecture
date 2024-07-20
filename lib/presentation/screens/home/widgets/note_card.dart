@@ -1,11 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/presentation/components/components.dart';
-import 'package:note_app/presentation/theme/colors.dart';
-import 'package:note_app/presentation/theme/spacing.dart';
-import 'package:note_app/presentation/theme/typography.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/presentation/components/components.dart';
+import 'package:memoscape/presentation/theme/colors.dart';
+import 'package:memoscape/presentation/theme/spacing.dart';
+import 'package:memoscape/presentation/theme/typography.dart';
 
 class NoteCard extends StatelessWidget {
   const NoteCard({
@@ -61,7 +61,8 @@ class NoteCard extends StatelessWidget {
                   const SizedBox(height: AppSpacings.m),
                   Text(
                     note.date,
-                    style: AppTypography.description.copyWith(color: Colors.black87),
+                    style: AppTypography.description
+                        .copyWith(color: Colors.black87),
                   ),
                 ],
               ),

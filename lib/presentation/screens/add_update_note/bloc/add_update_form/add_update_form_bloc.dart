@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:note_app/common/extension/string.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/presentation/screens/add_update_note/bloc/add_update_bloc.dart';
+import 'package:memoscape/common/extension/string.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/presentation/screens/add_update_note/bloc/add_update_bloc.dart';
 
 part 'add_update_form_bloc.freezed.dart';
 part 'add_update_form_event.dart';

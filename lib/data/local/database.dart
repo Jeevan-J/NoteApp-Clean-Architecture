@@ -1,8 +1,8 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:injectable/injectable.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/common/exception.dart';
-import 'package:note_app/domain/database/database.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/common/exception.dart';
+import 'package:memoscape/domain/database/database.dart';
 
 @LazySingleton(as: Database)
 class LocalDBImplementation implements Database {

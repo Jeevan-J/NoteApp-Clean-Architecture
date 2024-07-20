@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
-import 'package:note_app/domain/model/error.dart';
-import 'package:note_app/domain/repository/note_repository.dart';
+import 'package:memoscape/domain/model/error.dart';
+import 'package:memoscape/domain/repository/note_repository.dart';
 
 @injectable
 class DeleteNoteUsecase {

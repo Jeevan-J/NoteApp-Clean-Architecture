@@ -1,4 +1,4 @@
-package com.example.note_app
+package `in`.xploreos.memoscape
 
 import io.flutter.embedding.android.FlutterActivity
 

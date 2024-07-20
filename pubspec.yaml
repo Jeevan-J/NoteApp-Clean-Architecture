@@ -1,9 +1,9 @@
-name: note_app
-description: A new Flutter project.
+name: memoscape
+description: Memoscape is your personal digital sanctuary for capturing ideas, creating to-do lists, and securely storing important information. Enjoy the freedom of offline note-taking, accessible anytime, anywhere. Our simple yet powerful interface makes it effortless to organize your thoughts and stay on top of your tasks. With Memoscape, your memories and to-do lists are always within reach.
 
 publish_to: "none"
 
-version: 2.0.0+2
+version: 2.0.1+2
 
 environment:
   sdk: '>=3.2.0 <4.0.0'

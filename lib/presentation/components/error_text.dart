@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:note_app/presentation/theme/colors.dart';
-import 'package:note_app/presentation/theme/typography.dart';
+import 'package:memoscape/presentation/theme/colors.dart';
+import 'package:memoscape/presentation/theme/typography.dart';
 
 class ErrorText extends StatelessWidget {
   const ErrorText(this.message, {super.key});

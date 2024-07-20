@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/common/extension/random.dart';
-import 'package:note_app/common/strings.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/presentation/components/components.dart';
-import 'package:note_app/presentation/theme/colors.dart';
-import 'package:note_app/presentation/theme/spacing.dart';
-import 'package:note_app/presentation/theme/typography.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/common/extension/random.dart';
+import 'package:memoscape/common/strings.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/presentation/components/components.dart';
+import 'package:memoscape/presentation/theme/colors.dart';
+import 'package:memoscape/presentation/theme/spacing.dart';
+import 'package:memoscape/presentation/theme/typography.dart';
 
 import 'bloc/add_update_bloc.dart';
 import 'bloc/add_update_form/add_update_form_bloc.dart';
@@ -35,7 +35,8 @@ class _AddUpdateNoteScreenState extends State<AddUpdateNoteScreen> {
     super.initState();
 
     _titleController = TextEditingController(text: widget.note?.title);
-    _descriptionController = TextEditingController(text: widget.note?.description);
+    _descriptionController =
+        TextEditingController(text: widget.note?.description);
 
     context.read<AddUpdateFormBloc>().add(
           AddUpdateFormEvent.initialize(
@@ -101,7 +102,9 @@ class _BuildForm extends StatelessWidget {
       bottomNavigationBar: ColorsBar(
         selectedColor: state.selectedColor,
         onChanged: (Color color) {
-          context.read<AddUpdateFormBloc>().add(AddUpdateFormEvent.colorChanged(color));
+          context
+              .read<AddUpdateFormBloc>()
+              .add(AddUpdateFormEvent.colorChanged(color));
         },
       ),
       appBar: NoteAppBar(

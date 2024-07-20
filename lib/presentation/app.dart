@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/common/strings.dart';
-import 'package:note_app/di/di.dart';
+import 'package:memoscape/common/strings.dart';
+import 'package:memoscape/di/di.dart';
 
 import 'routes/routes.dart';
 import 'theme/theme.dart';

@@ -4,16 +4,16 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/common/extension/build_context.dart';
-import 'package:note_app/common/strings.dart';
-import 'package:note_app/domain/database/database.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/presentation/components/components.dart';
-import 'package:note_app/presentation/screens/add_update_note/bloc/add_update_bloc.dart';
-import 'package:note_app/presentation/theme/colors.dart';
-import 'package:note_app/presentation/theme/spacing.dart';
-import 'package:note_app/presentation/theme/typography.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/common/extension/build_context.dart';
+import 'package:memoscape/common/strings.dart';
+import 'package:memoscape/domain/database/database.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/presentation/components/components.dart';
+import 'package:memoscape/presentation/screens/add_update_note/bloc/add_update_bloc.dart';
+import 'package:memoscape/presentation/theme/colors.dart';
+import 'package:memoscape/presentation/theme/spacing.dart';
+import 'package:memoscape/presentation/theme/typography.dart';
 
 import 'bloc/home_bloc.dart';
 import 'bloc/multiple_delete/multiple_delete_bloc.dart';
@@ -37,20 +37,25 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Delete - ${selectedNotes.selectedIds.length}',
-                        style: AppTypography.headline6.copyWith(color: AppColors.white),
+                        style: AppTypography.headline6
+                            .copyWith(color: AppColors.white),
                       ),
                       const SizedBox(width: AppSpacings.xl),
                       const Icon(FeatherIcons.trash2),
                     ],
                   ),
                   onPressed: () {
-                    context.read<MultipleDeleteBloc>().add(const MultipleDeleteEvent.delete());
+                    context
+                        .read<MultipleDeleteBloc>()
+                        .add(const MultipleDeleteEvent.delete());
                   },
                 ),
                 AppButton(
                   child: const Icon(FeatherIcons.x),
                   onPressed: () {
-                    context.read<MultipleDeleteBloc>().add(const MultipleDeleteEvent.clearAll());
+                    context
+                        .read<MultipleDeleteBloc>()
+                        .add(const MultipleDeleteEvent.clearAll());
                   },
                 ),
               ].animate().fadeIn(),
@@ -115,7 +120,8 @@ class _BuildNotesList extends StatelessWidget {
                 context.router.push(NoteDetailRoute(noteId: noteId));
               },
               selected: (_) {
-                multipleDeleteBloc.add(MultipleDeleteEvent.toggleSelect(noteId));
+                multipleDeleteBloc
+                    .add(MultipleDeleteEvent.toggleSelect(noteId));
               },
             );
           },

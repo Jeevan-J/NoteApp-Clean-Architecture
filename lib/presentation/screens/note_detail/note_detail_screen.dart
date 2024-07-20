@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/common/extension/random.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/presentation/components/components.dart';
-import 'package:note_app/presentation/theme/spacing.dart';
-import 'package:note_app/presentation/theme/typography.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/common/extension/random.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/presentation/components/components.dart';
+import 'package:memoscape/presentation/theme/spacing.dart';
+import 'package:memoscape/presentation/theme/typography.dart';
 
 import 'bloc/action/note_action_bloc.dart';
 import 'bloc/detail/note_detail_bloc.dart';
@@ -25,7 +25,8 @@ class _NoteDetailScreenState extends State<NoteDetailScreen> {
   void initState() {
     super.initState();
 
-    BlocProvider.of<NoteDetailBloc>(context).add(NoteDetailEvent.showNote(widget.noteId));
+    BlocProvider.of<NoteDetailBloc>(context)
+        .add(NoteDetailEvent.showNote(widget.noteId));
   }
 
   @override
@@ -48,7 +49,9 @@ class _NoteDetailScreenState extends State<NoteDetailScreen> {
                 AppButton(
                   child: const Icon(FeatherIcons.trash2),
                   onPressed: () {
-                    context.read<NoteActionBloc>().add(NoteActionEvent.deleteNote(note.id!));
+                    context
+                        .read<NoteActionBloc>()
+                        .add(NoteActionEvent.deleteNote(note.id!));
                   },
                 ),
               ],
@@ -119,7 +122,8 @@ class _BuildTodoList extends StatelessWidget {
       children: [
         Text(
           "TODO's",
-          style: AppTypography.headline6.copyWith(decoration: TextDecoration.underline),
+          style: AppTypography.headline6
+              .copyWith(decoration: TextDecoration.underline),
         ),
         ListView.builder(
           key: const PageStorageKey('note-todos'),
@@ -137,11 +141,14 @@ class _BuildTodoList extends StatelessWidget {
               title: Text(
                 todo.title ?? '',
                 style: AppTypography.title.copyWith(
-                  decoration: todo.completed ? TextDecoration.lineThrough : null,
+                  decoration:
+                      todo.completed ? TextDecoration.lineThrough : null,
                 ),
               ),
               onChanged: (bool? value) {
-                context.read<NoteDetailBloc>().add(NoteDetailEvent.toggleTodoCheckbox(todo.id!));
+                context
+                    .read<NoteDetailBloc>()
+                    .add(NoteDetailEvent.toggleTodoCheckbox(todo.id!));
               },
             );
           },

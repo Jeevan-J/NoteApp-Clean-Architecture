@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
-import 'package:note_app/data/dto/note_dto.dart';
-import 'package:note_app/domain/database/database.dart';
-import 'package:note_app/domain/repository/note_repository.dart';
+import 'package:memoscape/data/dto/note_dto.dart';
+import 'package:memoscape/domain/database/database.dart';
+import 'package:memoscape/domain/repository/note_repository.dart';
 
 @LazySingleton(as: NoteRepository)
 class NoteRepositoryImplementation implements NoteRepository {
@@ -39,7 +39,8 @@ class NoteRepositoryImplementation implements NoteRepository {
   @override
   List<NoteDto> getAllNotes() {
     try {
-      final notesDto = _database.getAll().map((note) => note as NoteDto).toList();
+      final notesDto =
+          _database.getAll().map((note) => note as NoteDto).toList();
       return notesDto;
     } on Exception catch (_) {
       rethrow;

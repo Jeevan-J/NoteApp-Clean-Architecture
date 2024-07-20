@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/data/dto/note_dto.dart';
-import 'package:note_app/observer.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/data/dto/note_dto.dart';
+import 'package:memoscape/observer.dart';
 
 import 'di/di.dart';
 import 'presentation/app.dart';

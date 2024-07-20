@@ -1,5 +1,5 @@
 class StringConstants {
-  static const String appName = 'NoteApp';
+  static const String appName = 'Memoscape';
 
   //* Home Screen
   static const String homeAppBarTitle = 'Notes';

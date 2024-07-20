@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/common/constants.dart';
-import 'package:note_app/presentation/theme/colors.dart';
-import 'package:note_app/presentation/theme/spacing.dart';
-import 'package:note_app/presentation/theme/typography.dart';
+import 'package:memoscape/common/constants.dart';
+import 'package:memoscape/presentation/theme/colors.dart';
+import 'package:memoscape/presentation/theme/spacing.dart';
+import 'package:memoscape/presentation/theme/typography.dart';
 
 export 'package:flutter_feather_icons/flutter_feather_icons.dart';
 

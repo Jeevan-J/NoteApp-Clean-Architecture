@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:note_app/domain/model/note.dart';
-import 'package:note_app/domain/usecase/usecase.dart';
+import 'package:memoscape/domain/model/note.dart';
+import 'package:memoscape/domain/usecase/usecase.dart';
 
 part 'home_bloc.freezed.dart';
 part 'home_event.dart';
